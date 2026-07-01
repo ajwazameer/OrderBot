@@ -13,6 +13,31 @@ function parseOrderSummary(text) {
     return { clean, summary: null };
   }
 }
+function MessageContent({ text, isUser }) {
+  const lines = text.split("\n").filter((l) => l.trim() !== "");
+  const hasBullets = lines.some((l) => l.trim().startsWith("-") || l.trim().startsWith("*"));
+
+  if (!hasBullets || isUser) {
+    return <p className="text-sm leading-relaxed">{text}</p>;
+  }
+
+  return (
+    <ul className="space-y-1.5">
+      {lines.map((line, i) => {
+        const isBullet = line.trim().startsWith("-") || line.trim().startsWith("*");
+        const content = isBullet ? line.trim().slice(1).trim() : line.trim();
+        return isBullet ? (
+          <li key={i} className="flex gap-2 text-sm leading-relaxed">
+            <span className="text-ember mt-0.5 flex-shrink-0">•</span>
+            <span>{content}</span>
+          </li>
+        ) : (
+          <p key={i} className="text-sm leading-relaxed font-medium">{content}</p>
+        );
+      })}
+    </ul>
+  );
+}
 
 function OrderSummaryCard({ summary }) {
   return (
@@ -118,7 +143,7 @@ export default function Home() {
                         : "bg-white text-char border border-char/10 rounded-bl-sm shadow-sm"
                     }`}
                   >
-                    {clean}
+                    <MessageContent text={clean} isUser={isUser} />
                   </div>
                   {summary && <OrderSummaryCard summary={summary} />}
                 </div>

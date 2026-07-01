@@ -41,10 +41,3 @@ Visit `http://localhost:3000`.
 
 Deploys cleanly to [Vercel](https://vercel.com) — just set `GROQ_API_KEY` as an environment variable in your project settings.
 
-## 📚 Background
-
-This started as a notebook-based capstone in DeepLearning.AI's prompt engineering course, where I learned to write effective prompts, chain them together, build moderation layers, and evaluate LLM outputs. This repo extends that project into a real, deployable product with a custom interface.
-
-## 📄 License
-
-MIT

@@ -99,7 +99,7 @@ export default function Home() {
           </div>
           <div>
             <h1 className="font-display font-semibold text-lg leading-tight">OrderBot</h1>
-            <p className="text-xs text-crust/60">Built with prompt engineering + OpenAI API</p>
+            <p className="text-xs text-crust/60">AI-powered Pizza Ordering Assistant</p>
           </div>
         </div>
 
@@ -145,7 +145,7 @@ export default function Home() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Type your order... e.g. 'I'd like a medium pepperoni pizza'"
+            placeholder="Type your order… (e.g., 'Medium Pepperoni Pizza')"
             className="flex-1 resize-none rounded-xl border border-char/15 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ember/40"
           />
           <button
@@ -159,7 +159,7 @@ export default function Home() {
       </div>
 
       <p className="text-xs text-char/40 mt-4">
-        OrderBot · Built as a capstone for "ChatGPT Prompt Engineering for Developers"
+        Designed and developed using Next.js, OpenAI API, and modern prompt engineering
       </p>
     </main>
   );

@@ -6,9 +6,7 @@ A conversational AI ordering assistant built as the capstone project for **"Chat
 
 ## Live Demo
 
-\*\*https://order-bot-six.vercel.app/
-
---
+https://order-bot-six.vercel.app/
 
 ## ✨ Features
 

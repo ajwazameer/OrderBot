@@ -4,6 +4,12 @@ A conversational AI ordering assistant built as the capstone project for **"Chat
 
 ![status](https://img.shields.io/badge/status-active-brightgreen) ![stack](https://img.shields.io/badge/stack-Next.js%20%2B%20Groq-black)
 
+## Live Demo
+
+\*\*https://order-bot-six.vercel.app/
+
+--
+
 ## ✨ Features
 
 - Natural, conversational ordering flow — handles ambiguity, asks clarifying questions (size, quantity, toppings) one at a time
@@ -40,4 +46,3 @@ Visit `http://localhost:3000`.
 ## 📦 Deploy
 
 Deploys cleanly to [Vercel](https://vercel.com) — just set `GROQ_API_KEY` as an environment variable in your project settings.
-
